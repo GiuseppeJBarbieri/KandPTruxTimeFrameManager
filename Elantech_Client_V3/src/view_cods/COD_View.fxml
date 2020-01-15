@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="648.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cods.COD_Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="866.0" prefWidth="1439.0" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom, #C7EDFF,  #A6E2FF);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="40.0" prefWidth="221.0" text="COD" textAlignment="CENTER">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="36.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_RIGHT" prefHeight="801.0" prefWidth="1419.0" spacing="5.0">
+               <children>
+                  <TableView fx:id="timeFrameTableView" prefHeight="825.0" prefWidth="1419.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="orderNumberCol" prefWidth="75.0" text="Order Number" />
+                        <TableColumn fx:id="customerNameCol" prefWidth="75.0" text="Customer Name" />
+                        <TableColumn fx:id="storeNameCol" prefWidth="75.0" text="Store Name" />
+                        <TableColumn fx:id="driverCol" prefWidth="75.0" text="Driver" />
+                        <TableColumn fx:id="orderDateCol" prefWidth="75.0" text="Order Date" />
+                        <TableColumn fx:id="codCol" prefWidth="75.0" text="COD" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <MenuButton fx:id="productsMenuBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="6.0">
+         <items>
+            <MenuItem fx:id="saveStoreTableMenuItem" mnemonicParsing="false" text="Save Table" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="addStoreMenuItem" mnemonicParsing="false" text="Add COD" />
+            <MenuItem fx:id="editStoreMenuItem" mnemonicParsing="false" text="Edit COD" />
+            <MenuItem fx:id="removeStoreMenuItem" mnemonicParsing="false" text="Remove COD" />
+         </items>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8-menu-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MenuButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="500.0" prefHeight="629.0" prefWidth="981.0" style="-fx-background-color: #59D8E6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_dashboard.Dashboard_Controller">
+   <children>
+      <SplitPane dividerPositions="0.4513556618819777" layoutX="384.0" layoutY="163.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: linear-gradient(to bottom, #C7EDFF,  #A6E2FF);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="342.0" prefWidth="925.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Store Information">
+                           <font>
+                              <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <VBox>
+                           <children>
+                              <TableView fx:id="storeTableView" prefHeight="565.0" prefWidth="959.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true">
+                                 <columns>
+                                    <TableColumn fx:id="storeNameCol" prefWidth="75.0" text="Store Name" />
+                                    <TableColumn fx:id="storeAddressCol" prefWidth="75.0" text="Address" />
+                                    <TableColumn fx:id="storeEmailCol" prefWidth="75.0" text="Email" />
+                                    <TableColumn fx:id="storePhoneNumberCol" prefWidth="75.0" text="Phone Number" />
+                                    <TableColumn fx:id="storeFaxCol" prefWidth="75.0" text="Fax" />
+                                    <TableColumn fx:id="storeIDcol" prefWidth="75.0" text="Store ID" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <TextField fx:id="searchTxt" alignment="CENTER" layoutX="762.0" layoutY="36.0" prefHeight="22.0" prefWidth="146.0" promptText="Search" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <MenuButton fx:id="productsMenuBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="6.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                    <items>
+                        <MenuItem fx:id="saveStoreTableMenuItem" mnemonicParsing="false" text="Save Table" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                      <MenuItem fx:id="addStoreMenuItem" mnemonicParsing="false" text="Add Store" />
+                      <MenuItem fx:id="editStoreMenuItem" mnemonicParsing="false" text="Edit Store" />
+                        <MenuItem fx:id="removeStoreMenuItem" mnemonicParsing="false" text="Remove Store" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="emailStoreMenuItem" mnemonicParsing="false" text="Email Store" />
+                        <MenuItem fx:id="emailAllStoresMenuItem" mnemonicParsing="false" text="Email All Store's" />
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-menu-96.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="342.0" prefWidth="925.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Time Frame Information">
+                           <font>
+                              <Font name="Tw Cen MT Condensed Extra Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="timeFrameTableView" prefHeight="514.0" prefWidth="959.0" style="-fx-background-radius: 20;">
+                           <columns>
+                              <TableColumn fx:id="orderIdCol" prefWidth="75.0" text="Order ID" />
+                              <TableColumn fx:id="customerNameCol" prefWidth="75.0" text="Customer Name" />
+                              <TableColumn fx:id="customerTownCol" prefWidth="75.0" text="Town" />
+                              <TableColumn fx:id="customerPhoneNumberCol" prefWidth="75.0" text="Phone Number" />
+                              <TableColumn fx:id="driverCol" prefWidth="75.0" text="Driver" />
+                              <TableColumn fx:id="timeFrameStartCol" prefWidth="75.0" text="Time Frame Start" />
+                              <TableColumn fx:id="timeFrameEndCol" prefWidth="75.0" text="Time Frame End" />
+                              <TableColumn fx:id="orderDateCol" prefWidth="75.0" text="Order Date" />
+                              <TableColumn fx:id="codCol" prefWidth="75.0" text="COD" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <MenuButton fx:id="inventoryMenuBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="38.0" prefWidth="6.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <items>
+                        <MenuItem fx:id="saveTimeFrameMenuItem" mnemonicParsing="false" text="Save Table" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="addTimeFrameMenuItem" mnemonicParsing="false" text="Add Time Frame" />
+                        <MenuItem fx:id="editTimeFrameMenuItem" mnemonicParsing="false" text="Edit Time Frame" />
+                        <MenuItem fx:id="removeTimeFrameMenuItem" mnemonicParsing="false" text="Remove Time Frame" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-menu-96.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <DatePicker fx:id="datePicker" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="40.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

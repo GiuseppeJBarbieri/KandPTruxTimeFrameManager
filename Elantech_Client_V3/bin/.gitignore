@@ -1,0 +1,14 @@
+/models/
+/server_to_client_controller/
+/view_add_store/
+/view_add_timeframe/
+/view_cods/
+/view_dashboard/
+/view_edit_store/
+/view_edit_timeframe/
+/view_login/
+/view_login_create_account/
+/view_login_forgot_password/
+/view_main/
+/view_server_down_msg/
+/view_show_all_times/

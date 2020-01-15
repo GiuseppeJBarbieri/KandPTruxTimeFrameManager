@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="1203.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_main.Main_View_Controller">
+   <children>
+      <AnchorPane prefHeight="53.0" prefWidth="1203.0" style="-fx-background-color: #1C1D21;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="53.0" fitWidth="184.0" layoutX="-34.0" layoutY="-61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../icons/Logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="30.0" layoutX="213.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../icons/icons8-menu-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="949.0" layoutY="26.0" text="Welcome" textFill="WHITE" AnchorPane.rightAnchor="149.0">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstNameLbl" layoutX="1069.0" layoutY="26.0" text="Welcome" textFill="WHITE" AnchorPane.rightAnchor="29.0">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="23.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="199.0" layoutY="17.0" mnemonicParsing="false" opacity="0.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Log Out" />
+               </items>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="main_view_pane" layoutX="193.0" layoutY="53.0" prefHeight="644.0" prefWidth="1010.0" style="-fx-background-color: #C8EDFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0" />
+      <VBox layoutX="115.0" layoutY="53.0" prefHeight="644.0" prefWidth="193.0" spacing="25.0" style="-fx-background-color: #32708F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="53.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <HBox fx:id="dashboardPane" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="40.0" style="-fx-background-color: #3A82A6; -fx-background-radius: 3;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="10.0" style="-fx-background-color: #6298B3;" />
+                  <Label text="Time Frame" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Line endX="-70.42398071289062" endY="2.9534101486206055E-4" startX="-97.71687316894531" startY="2.4878978729248047E-4" stroke="#85b5cc" />
+               </children>
+            </HBox>
+            <HBox fx:id="allTimesPane" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="40.0" style="-fx-background-color: #3A82A6; -fx-background-radius: 3;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="10.0" style="-fx-background-color: #6298B3;" />
+                  <Label text="All Times" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets right="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
