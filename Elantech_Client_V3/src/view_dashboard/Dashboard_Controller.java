@@ -8,16 +8,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Optional;
-import java.util.Properties;
 import java.util.ResourceBundle;
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -31,6 +22,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import alerts.Alert_Box;
 import client_to_server_controller.Client_Controller;
+import event_objects.Email_One_TimeFrame_Event_Object;
 import event_objects.Remove_Store_Event_Object;
 import event_objects.Search_All_TimeFrame_Event_Object;
 import event_objects.Search_TimeFrame_Event_Object;
@@ -122,7 +114,7 @@ public class Dashboard_Controller implements Initializable {
 		datePicker.setOnAction(e -> {
 			LocalDate localDate = datePicker.getValue();
 			ArrayList<TimeFrame_Model> timeFrameList2 = new ArrayList<>();
-			System.out.println(localDate.toString());
+			//System.out.println(localDate.toString());
 
 			for (int i = 0; i < timeFrameList.size(); i++) {
 				if (timeFrameList.get(i).getOrderDate().equals(localDate.toString())) {
@@ -193,7 +185,9 @@ public class Dashboard_Controller implements Initializable {
 		/* INVENTORY MENU ITEM LISTENERS */
 
 		emailStoreMenuItem.setOnAction(e -> {
-			LocalDate today = LocalDate.now();
+			Email_One_TimeFrame_Event_Object itemObj = new Email_One_TimeFrame_Event_Object(storeTableView.getSelectionModel().getSelectedItem().getStoreID());
+			clientController.setDashboardController(this);
+			clientController.sendMessage(itemObj);
 
 		});
 
@@ -310,7 +304,7 @@ public class Dashboard_Controller implements Initializable {
 		this.timeFrameList = timeFrameList;
 		LocalDate localDate = datePicker.getValue();
 		ArrayList<TimeFrame_Model> timeFrameList2 = new ArrayList<>();
-		System.out.println(localDate.toString());
+		//System.out.println(localDate.toString());
 
 		for (int i = 0; i < timeFrameList.size(); i++) {
 			if (timeFrameList.get(i).getOrderDate().equals(localDate.toString())) {

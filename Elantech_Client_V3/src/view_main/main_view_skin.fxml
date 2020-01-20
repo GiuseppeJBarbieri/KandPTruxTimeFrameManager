@@ -80,6 +80,24 @@
                   <Insets right="10.0" />
                </padding>
             </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Line endX="-70.42398071289062" endY="2.9534101486206055E-4" startX="-97.71687316894531" startY="2.4878978729248047E-4" stroke="#85b5cc" />
+               </children>
+            </HBox>
+            <HBox fx:id="billingPane" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="40.0" style="-fx-background-color: #3A82A6; -fx-background-radius: 3;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="10.0" style="-fx-background-color: #6298B3;" />
+                  <Label text="Billing" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
          </children>
          <padding>
             <Insets right="10.0" top="20.0" />

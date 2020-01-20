@@ -59,7 +59,7 @@ public class Login_View_Controller implements Initializable {
 	}
 
 	public void startServer() {
-		client = new Client_Controller("68.129.33.77", 8000, this);
+		client = new Client_Controller("68.129.33.77", 8001, this);
 		t1 = new Thread(client);
 		t1.setDaemon(true);
 		t1.start();
@@ -67,8 +67,8 @@ public class Login_View_Controller implements Initializable {
 
 	private void login() {
 		Login_Event_Object loginObj = new Login_Event_Object(this, usernameTxt.getText(), Integer.toString(passwordTxt.getText().hashCode()));
-		System.out.println(usernameTxt.getText());
-		System.out.println(passwordTxt.getText().hashCode());
+		//System.out.println(usernameTxt.getText());
+		//System.out.println(passwordTxt.getText().hashCode());
 		client.sendMessage(loginObj);
 		client.setUserName(usernameTxt.getText());
 	}

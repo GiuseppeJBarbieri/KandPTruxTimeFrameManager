@@ -8,6 +8,7 @@ import javafx.application.Platform;
 import javafx.stage.Stage;
 import view_add_store.Add_Store_Controller;
 import view_add_timeframe.Add_TimeFrame_Controller;
+import view_billing.Billing_Controller;
 import view_cods.COD_Controller;
 import view_dashboard.Dashboard_Controller;
 import view_edit_store.Edit_Store_Controller;
@@ -41,6 +42,7 @@ public class Client_Controller implements Runnable {
 	private Add_TimeFrame_Controller add_Inventory_Controller;
 	private Edit_TimeFrame_Controller edit_Inventory_Controller;
 	private COD_Controller cod_Controller;
+	private Billing_Controller billing_Controller;
 	
 	private Create_Account_View_Controller create_Account_View_Controller;
 	private Forgot_Password_View_Controller forgot_Password_View_Controller;
@@ -198,5 +200,12 @@ public class Client_Controller implements Runnable {
 	public COD_Controller getCodController() {
 		return cod_Controller;
 	}
+
+	public void setBillingController(Billing_Controller billing_Controller) {
+		this.billing_Controller = billing_Controller;
+	}
 	
+	public Billing_Controller getBillingController() {
+		return billing_Controller;
+	}
 }

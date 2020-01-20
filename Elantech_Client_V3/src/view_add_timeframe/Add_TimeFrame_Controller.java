@@ -7,6 +7,8 @@ import java.util.ResourceBundle;
 import alerts.Alert_Box;
 import client_to_server_controller.Client_Controller;
 import event_objects.Add_TimeFrame_Event_Object;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -46,6 +48,15 @@ public class Add_TimeFrame_Controller implements Initializable {
 		backBtn.setOnAction(e -> goBack());
 		finishBtn.setOnAction(e -> finishAdding());
 		datePicker.setValue(LocalDate.now());
+		
+		codTxt.textProperty().addListener(new ChangeListener<String>() {
+			@Override
+			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+				if (!newValue.matches("\\d*")) {
+					codTxt.setText(newValue.replaceAll("[^\\d\\.]", ""));
+				}
+			}
+		});
 
 	}
 

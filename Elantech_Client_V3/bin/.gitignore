@@ -1,3 +1,10 @@
+/alerts/
+/app/
+/client_to_server_controller/
+/client_to_server_controller_methods/
+/event_objects/
+/icons/
+/model_trucking/
 /models/
 /server_to_client_controller/
 /view_add_store/
@@ -12,3 +19,4 @@
 /view_main/
 /view_server_down_msg/
 /view_show_all_times/
+/view_billing/

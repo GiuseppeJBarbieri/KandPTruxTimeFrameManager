@@ -2,8 +2,10 @@ package client_to_server_controller_methods;
 
 import client_to_server_controller.Client_Controller;
 import event_objects.All_Time_Frame_Request;
+import event_objects.Billing_Store_Search_Result_Model;
 import event_objects.COD_Search_Result_Model;
 import event_objects.Logout_All_Users_Event_Object;
+import event_objects.One_Email_Sent_Model;
 import model_trucking.Add_Store_Request_Model;
 import model_trucking.Add_TimeFrame_Model;
 import model_trucking.Edit_Store_Model;
@@ -26,12 +28,14 @@ import server_to_client_controller.Edit_TimeFrame_Method;
 import server_to_client_controller.Emails_Sent_Methods;
 import server_to_client_controller.Login_Method;
 import server_to_client_controller.Logout_All_Users_Method;
+import server_to_client_controller.One_Email_Sent_Method;
 import server_to_client_controller.Remove_Store_Method;
 import server_to_client_controller.Remove_TimeFrame_Method;
 import server_to_client_controller.Request_Logout_Method;
 import server_to_client_controller.Reset_Account_Password_Method;
 import server_to_client_controller.Search_COD_Request;
 import server_to_client_controller.Search_Store_Method;
+import server_to_client_controller.Search_Stores_Billing_Method;
 import server_to_client_controller.Search_TimeFrame_Method;
 
 
@@ -71,6 +75,10 @@ public class Methods_For_Products {
 			new Search_COD_Request(object, client);
 		} else if(object.getClass() == Email_Sent_Model.class) {
 			new Emails_Sent_Methods(object, client);
+		} else if(object.getClass() == Billing_Store_Search_Result_Model.class) {
+			new Search_Stores_Billing_Method(object, client);
+		} else if(object.getClass() == One_Email_Sent_Model.class) {
+			new One_Email_Sent_Method(object, client);
 		}
 		
 	}

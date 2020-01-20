@@ -16,6 +16,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import models.User_Account_Information;
+import view_billing.Show_Billing_View;
 import view_dashboard.Show_Dashboard;
 import view_show_all_times.Show_All_Times_View;
 
@@ -23,7 +24,7 @@ public class Main_View_Controller implements Initializable {
 	@FXML
 	private AnchorPane main_view_pane;
 	@FXML
-	private HBox dashboardPane, allTimesPane;
+	private HBox dashboardPane, allTimesPane, billingPane;
 	@FXML
 	private Label firstNameLbl;
 	
@@ -49,6 +50,12 @@ public class Main_View_Controller implements Initializable {
 			resetPaneColor(hboxList);
 			allTimesPane.setBackground(new Background(new BackgroundFill(javafx.scene.paint.Color.web("#85B5CC"), new CornerRadii(3), Insets.EMPTY)));
 			new Show_All_Times_View(this, main_view_pane, clientController, user_Account_Model);
+		});
+		
+		billingPane.setOnMouseClicked(e -> {
+			resetPaneColor(hboxList);
+			billingPane.setBackground(new Background(new BackgroundFill(javafx.scene.paint.Color.web("#85B5CC"), new CornerRadii(3), Insets.EMPTY)));
+			new Show_Billing_View(this, main_view_pane, clientController, user_Account_Model);
 		});
 	}
 	
