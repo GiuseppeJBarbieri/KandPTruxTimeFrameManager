@@ -22,7 +22,7 @@
                <children>
                   <ImageView fitHeight="579.0" fitWidth="648.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../icons/Login-bg.jpg" />
+                        <Image url="@../icons/NEXT-Trucking-Marketplace.jpg" />
                      </image>
                      <effect>
                         <ColorAdjust brightness="-0.64" contrast="0.12" hue="0.07" saturation="1.0" />
@@ -33,7 +33,7 @@
                         <Font name="Verdana" size="47.0" />
                      </font>
                   </Label>
-                  <Label layoutX="117.0" layoutY="198.0" text="To The Elantech Management Application" textFill="WHITE">
+                  <Label layoutX="153.0" layoutY="196.0" text="To The KandPTrucking Application" textFill="WHITE">
                      <font>
                         <Font name="Verdana" size="20.0" />
                      </font>
@@ -72,12 +72,12 @@
                               <Font name="Verdana" size="20.0" />
                            </font>
                         </Hyperlink>
-                        <ImageView fitHeight="102.0" fitWidth="254.0" layoutX="132.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                        <Line endX="333.0" layoutX="141.0" layoutY="323.0" startX="-100.0" />
+                        <ImageView fitHeight="113.0" fitWidth="313.0" layoutX="101.0" layoutY="39.0">
                            <image>
-                              <Image url="@Logo.png" />
+                              <Image url="@../icons/iconfinder-11-512.png" />
                            </image>
                         </ImageView>
-                        <Line endX="333.0" layoutX="141.0" layoutY="323.0" startX="-100.0" />
                      </children>
                   </Pane>
                   <Button fx:id="closeBtn" layoutX="585.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="28.0">

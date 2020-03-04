@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Giuseppe/Desktop/javax.mail.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Giuseppe/Documents/GitHubMobile/ElantechClientV4/Elantech_Client_V3/external jars/poi-3.17/commons-codec-1.10.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Giuseppe/Documents/GitHubMobile/ElantechClientV4/Elantech_Client_V3/external jars/poi-3.17/commons-collections4-4.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Giuseppe/Documents/GitHubMobile/ElantechClientV4/Elantech_Client_V3/external jars/poi-3.17/commons-logging-1.2.jar"/>
@@ -21,5 +20,6 @@
 	<classpathentry kind="lib" path="C:/Users/Giuseppe/Documents/GitHubMobile/ElantechClientV4/Elantech_Client_V3/external jars/lib/jboss-common-jdbc-wrapper-src.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Giuseppe/Documents/GitHubMobile/ElantechClientV4/Elantech_Client_V3/external jars/lib/protobuf-java-2.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Giuseppe/Documents/GitHubMobile/ElantechClientV4/Elantech_Client_V3/external jars/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="external jars/javax.mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

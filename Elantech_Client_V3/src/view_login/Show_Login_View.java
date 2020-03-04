@@ -16,7 +16,7 @@ public class Show_Login_View {
 	
 	public Show_Login_View(Stage stage) {
 		try {
-			Image image = new Image("/icons/logo_sm.png");
+			Image image = new Image("/icons/iconfinder-11-512.png");
 			stage.getIcons().add(image);
 			stage.setTitle("ElantechLLC"); 
 			
