@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="648.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_show_all_times.All_Times_Controller">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="648.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_show_all_times.All_Times_Controller">
    <children>
       <VBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="866.0" prefWidth="1439.0" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom, #C7EDFF,  #A6E2FF);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,16 +22,12 @@
                   <TableView fx:id="timeFrameTableView" prefHeight="825.0" prefWidth="1419.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true">
                      <columns>
                         <TableColumn fx:id="storeNameCol" prefWidth="75.0" text="Store Name" />
-                        <TableColumn fx:id="storePhoneNumCol" prefWidth="75.0" text="Store Phone Number" />
-                        <TableColumn fx:id="orderIDCol" prefWidth="75.0" text="Order ID" />
                         <TableColumn fx:id="customerNameCol" prefWidth="75.0" text="Customer Name" />
                         <TableColumn fx:id="townCol" prefWidth="75.0" text="Town" />
-                        <TableColumn fx:id="customerPhoneNumberCol" prefWidth="75.0" text="Phone Number Col" />
+                        <TableColumn fx:id="customerPhoneNumberCol" prefWidth="75.0" text="Order Number" />
                         <TableColumn fx:id="driverCol" prefWidth="75.0" text="Driver" />
-                        <TableColumn fx:id="timeFrameStartCol" prefWidth="75.0" text="Time Frame Start" />
-                        <TableColumn fx:id="timeFrameEndCol" prefWidth="75.0" text="Time Frame End" />
+                        <TableColumn fx:id="timeFrameStartCol" prefWidth="75.0" text="Time Frame" />
                         <TableColumn fx:id="orderDateCol" prefWidth="75.0" text="Order Date" />
-                        <TableColumn fx:id="codCol" prefWidth="75.0" text="COD" />
                      </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

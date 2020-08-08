@@ -3,13 +3,12 @@ package view_dashboard;
 import client_to_server_controller.Client_Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
-import models.User_Account_Information;
 import view_main.Main_View_Controller;
 
 public class Show_Dashboard {
 
 	@SuppressWarnings("static-access")
-	public Show_Dashboard(Main_View_Controller main_View_Controller, AnchorPane main_view_pane, Client_Controller client, User_Account_Information user_Account_Model) {
+	public Show_Dashboard(Main_View_Controller main_View_Controller, AnchorPane main_view_pane, Client_Controller client) {
 		try {
 			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view_dashboard/Dashboard_Skin.fxml"));
@@ -18,7 +17,6 @@ public class Show_Dashboard {
 			
 			controller.setMainViewController(main_View_Controller);
 			controller.setClientController(client);
-			controller.setUserAccountModel(user_Account_Model);
 			controller.setMainViewPane(main_view_pane);
 			controller.searchStore("");
 			

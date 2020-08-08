@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1110.0" prefWidth="2355.0" style="-fx-background-color: linear-gradient(to bottom, #C7EDFF,  #A6E2FF);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_edit_timeframe.Edit_TimeFrame_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="917.0" prefWidth="1494.0" style="-fx-background-color: linear-gradient(to bottom, #C7EDFF,  #A6E2FF);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_edit_timeframe.Edit_TimeFrame_Controller">
    <children>
-      <HBox layoutX="20.0" layoutY="130.0" prefHeight="72.0" prefWidth="859.0" spacing="10.0" style="-fx-border-color: #3D6B80; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-radius: 10; -fx-background-color: #CBEDFF;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+      <HBox layoutX="20.0" layoutY="130.0" prefHeight="72.0" prefWidth="859.0" spacing="10.0" style="-fx-border-color: #3D6B80; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-radius: 10; -fx-background-color: #CBEDFF;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
          <children>
-            <VBox prefHeight="49.0" prefWidth="720.0">
+            <VBox prefHeight="57.0" prefWidth="1149.0">
                <children>
                   <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
                      <children>
@@ -39,67 +38,18 @@
                   </TextField>
                </children>
             </VBox>
-            <VBox prefHeight="49.0" prefWidth="527.0">
+            <VBox prefHeight="57.0" prefWidth="275.0">
                <children>
                   <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
                      <children>
-                        <Label text="Address">
+                        <Label text="Order Date">
                            <font>
                               <Font name="Lucida Sans Demibold" size="19.0" />
                            </font>
                         </Label>
                      </children>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
                   </HBox>
-                  <TextField fx:id="storeAddTxt" editable="false" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                     <font>
-                        <Font name="Lucida Sans Demibold" size="12.0" />
-                     </font>
-                  </TextField>
-               </children>
-            </VBox>
-            <VBox prefHeight="49.0" prefWidth="335.0">
-               <children>
-                  <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
-                     <children>
-                        <Label text="Email">
-                           <font>
-                              <Font name="Lucida Sans Demibold" size="19.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </HBox>
-                  <TextField fx:id="storeEmailTxt" editable="false" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                     <font>
-                        <Font name="Lucida Sans Demibold" size="12.0" />
-                     </font>
-                  </TextField>
-               </children>
-            </VBox>
-            <VBox prefHeight="49.0" prefWidth="433.0">
-               <children>
-                  <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
-                     <children>
-                        <Label text="Phone Number">
-                           <font>
-                              <Font name="Lucida Sans Demibold" size="19.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </HBox>
-                  <TextField fx:id="storePhoneNumTxt" editable="false" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                     <font>
-                        <Font name="Lucida Sans Demibold" size="12.0" />
-                     </font>
-                  </TextField>
+                  <DatePicker fx:id="datePicker" prefHeight="29.0" prefWidth="2319.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;" />
                </children>
             </VBox>
          </children>
@@ -148,225 +98,127 @@
             <Font name="Lucida Sans Demibold" size="46.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="20.0" layoutY="243.0" style="-fx-border-color: #3D6B80; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="243.0">
-         <content>
-            <VBox prefHeight="853.0" prefWidth="2306.0" spacing="10.0" style="-fx-background-radius: 10; -fx-background-color: #CBEDFF;">
+      <VBox layoutX="214.0" layoutY="272.0" prefHeight="658.0" prefWidth="1464.0" spacing="10.0" style="-fx-background-radius: 10; -fx-background-color: #CBEDFF; -fx-border-color: #3D6B80; -fx-border-radius: 10; -fx-border-width: 3;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="244.0">
+         <children>
+            <VBox prefHeight="52.0" prefWidth="267.0">
                <children>
-                  <VBox prefHeight="52.0" prefWidth="250.0">
+                  <HBox>
                      <children>
-                        <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Order ID">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <TextField fx:id="orderIDTxt" editable="false" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
+                        <Label text="*" textFill="RED">
                            <font>
-                              <Font name="Lucida Sans Demibold" size="12.0" />
+                              <Font name="Lucida Sans Demibold" size="19.0" />
                            </font>
-                        </TextField>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="267.0">
-                     <children>
-                        <HBox>
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Customer Name">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <TextField fx:id="customerNameTxt" prefHeight="25.0" prefWidth="230.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
+                        </Label>
+                        <Label text="Customer Name">
                            <font>
-                              <Font name="Lucida Sans Demibold" size="12.0" />
+                              <Font name="Lucida Sans Demibold" size="19.0" />
                            </font>
-                        </TextField>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
                      </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="211.0">
-                     <children>
-                        <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Order Date">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <DatePicker fx:id="datePicker" prefHeight="29.0" prefWidth="253.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;" />
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="322.0">
-                     <children>
-                        <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Town">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <TextField fx:id="townTxt" prefHeight="25.0" prefWidth="230.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                           <font>
-                              <Font name="Lucida Sans Demibold" size="12.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="322.0">
-                     <children>
-                        <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Driver">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <ChoiceBox fx:id="driverChoiceBox" prefHeight="29.0" prefWidth="2364.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;" />
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="265.0">
-                     <children>
-                        <HBox>
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Phone Number">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <TextField fx:id="customerPhoneNumberTxt" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                           <font>
-                              <Font name="Lucida Sans Demibold" size="12.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="247.0">
-                     <children>
-                        <HBox>
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Time Frame Start">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <TextField fx:id="timeframeStartTxt" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                           <font>
-                              <Font name="Lucida Sans Demibold" size="12.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="321.0">
-                     <children>
-                        <HBox>
-                           <children>
-                              <Label text="*" textFill="RED">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Time Frame End">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <TextField fx:id="timeframeEndTxt" prefHeight="25.0" prefWidth="230.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                           <font>
-                              <Font name="Lucida Sans Demibold" size="12.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="52.0" prefWidth="321.0">
-                     <children>
-                        <HBox>
-                           <children>
-                              <Label text="COD">
-                                 <font>
-                                    <Font name="Lucida Sans Demibold" size="19.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <TextField fx:id="codTxt" prefHeight="25.0" prefWidth="230.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
-                           <font>
-                              <Font name="Lucida Sans Demibold" size="12.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </VBox>
+                  </HBox>
+                  <TextField fx:id="customerNameTxt" prefHeight="25.0" prefWidth="230.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="12.0" />
+                     </font>
+                  </TextField>
                </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
             </VBox>
-         </content>
-      </ScrollPane>
+            <VBox prefHeight="52.0" prefWidth="322.0">
+               <children>
+                  <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
+                     <children>
+                        <Label text="*" textFill="RED">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Town">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="townTxt" prefHeight="25.0" prefWidth="230.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="52.0" prefWidth="322.0">
+               <children>
+                  <HBox prefHeight="0.0" prefWidth="196.0" spacing="5.0">
+                     <children>
+                        <Label text="*" textFill="RED">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Driver">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ChoiceBox fx:id="driverChoiceBox" prefHeight="29.0" prefWidth="2364.0" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="52.0" prefWidth="247.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="*" textFill="RED">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label text="Time Frame">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="timeframeTxt" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="52.0" prefWidth="265.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Order Number">
+                           <font>
+                              <Font name="Lucida Sans Demibold" size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="orderNumberTxt" style="-fx-border-color: #3D6B80; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 7;">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
    </children>
 </AnchorPane>

@@ -15,6 +15,7 @@ public class Search_TimeFrame_Method {
 	public Search_TimeFrame_Method(Object object, Client_Controller client) {
 		Search_TimeFrame_Model obj = (Search_TimeFrame_Model) object;
 		timeFrameList = obj.getTimeframeResultsList();
+		
 		System.out.println(timeFrameList.size());
 		Platform.runLater(new Runnable() {
 			@Override

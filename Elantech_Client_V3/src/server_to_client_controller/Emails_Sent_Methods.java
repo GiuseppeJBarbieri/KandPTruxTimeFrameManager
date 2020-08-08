@@ -9,7 +9,6 @@ import models.Server_To_Client_Message_Model;
 public class Emails_Sent_Methods {
 
 	public Emails_Sent_Methods(Object object, Client_Controller client) {
-		Alert_Box alertBox = new Alert_Box();
 		Email_Sent_Model obj = (Email_Sent_Model) object;
 		Server_To_Client_Message_Model message = obj.getMessage();
 		
@@ -18,6 +17,8 @@ public class Emails_Sent_Methods {
 			Platform.runLater(new Runnable() {
 				@Override
 				public void run() {
+					client.getDashboardController().closeAlert();
+					Alert_Box alertBox = new Alert_Box();
 					alertBox.informationAlertBox(message.getTitle(), message.getHeader(), message.getContent());
 					
 				}
@@ -28,7 +29,9 @@ public class Emails_Sent_Methods {
 			Platform.runLater(new Runnable() {
 				@Override
 				public void run() {
-					alertBox.errorAlertBox(message.getTitle(), message.getHeader(), message.getContent());
+					client.getDashboardController().closeAlert();
+					Alert_Box alertBox = new Alert_Box();
+					alertBox.informationAlertBox(message.getTitle(), message.getHeader(), message.getContent());
 				}
 			});
 			

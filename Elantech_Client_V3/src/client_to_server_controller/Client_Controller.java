@@ -8,14 +8,9 @@ import javafx.application.Platform;
 import javafx.stage.Stage;
 import view_add_store.Add_Store_Controller;
 import view_add_timeframe.Add_TimeFrame_Controller;
-import view_billing.Billing_Controller;
-import view_cods.COD_Controller;
 import view_dashboard.Dashboard_Controller;
 import view_edit_store.Edit_Store_Controller;
 import view_edit_timeframe.Edit_TimeFrame_Controller;
-import view_login.Login_View_Controller;
-import view_login_create_account.Create_Account_View_Controller;
-import view_login_forgot_password.Forgot_Password_View_Controller;
 import view_main.Main_View_Controller;
 import view_server_down_msg.Show_Server_Down_View;
 import view_show_all_times.All_Times_Controller;
@@ -33,7 +28,6 @@ public class Client_Controller implements Runnable {
 	private boolean runThread2 = true;
 	private Stage stage;
 
-	private Login_View_Controller viewController;
 	private Dashboard_Controller dashboard_Controller;
 	private Main_View_Controller mainView;
 	private Add_Store_Controller add_Product_Controller;
@@ -41,17 +35,11 @@ public class Client_Controller implements Runnable {
 	private All_Times_Controller all_Times_Controller;
 	private Add_TimeFrame_Controller add_Inventory_Controller;
 	private Edit_TimeFrame_Controller edit_Inventory_Controller;
-	private COD_Controller cod_Controller;
-	private Billing_Controller billing_Controller;
-	
-	private Create_Account_View_Controller create_Account_View_Controller;
-	private Forgot_Password_View_Controller forgot_Password_View_Controller;
-	
-	public Client_Controller(String hostname, int port, Login_View_Controller viewController) {
+
+
+	public Client_Controller(String hostname, int port) {
 		this.hostname = hostname;
 		this.port = port;
-		this.viewController = viewController;
-
 	}
 
 	@Override
@@ -94,7 +82,6 @@ public class Client_Controller implements Runnable {
 
 	public void sendMessage(Object obj) {
 		writeThread.sendMessage(obj);
-
 	}
 
 	public void setUserName(String userName) {
@@ -109,10 +96,6 @@ public class Client_Controller implements Runnable {
 
 	public void setStage(Stage stage) {
 		this.stage = stage;
-	}
-
-	public Login_View_Controller getLoginView() {
-		return viewController;
 	}
 
 	public Dashboard_Controller getDashboardController() {
@@ -151,7 +134,6 @@ public class Client_Controller implements Runnable {
 		return edit_Product_Controller;
 	}
 
-
 	public void setAddInventoryController(Add_TimeFrame_Controller add_Inventory_Controller) {
 		this.add_Inventory_Controller = add_Inventory_Controller;
 	}
@@ -168,22 +150,6 @@ public class Client_Controller implements Runnable {
 		return edit_Inventory_Controller;
 	}
 
-	public void setCreateAccountScreen(Create_Account_View_Controller create_Account_View_Controller) {
-		this.create_Account_View_Controller = create_Account_View_Controller;
-	}
-
-	public Create_Account_View_Controller getCreateAccountScreen() {
-		return create_Account_View_Controller;
-	}
-
-	public void setForgotPasswordScreen(Forgot_Password_View_Controller forgot_Password_View_Controller) {
-		this.forgot_Password_View_Controller = forgot_Password_View_Controller;
-	}
-
-	public Forgot_Password_View_Controller getForgotPasswordScreen() {
-		return forgot_Password_View_Controller;
-	}
-
 	public void setAllTimesController(All_Times_Controller all_Times_Controller) {
 		this.all_Times_Controller = all_Times_Controller;
 	}
@@ -192,20 +158,4 @@ public class Client_Controller implements Runnable {
 		return all_Times_Controller;
 	}
 
-	public void setCODController(COD_Controller cod_Controller) {
-		this.cod_Controller = cod_Controller;
-		
-	}
-	
-	public COD_Controller getCodController() {
-		return cod_Controller;
-	}
-
-	public void setBillingController(Billing_Controller billing_Controller) {
-		this.billing_Controller = billing_Controller;
-	}
-	
-	public Billing_Controller getBillingController() {
-		return billing_Controller;
-	}
 }

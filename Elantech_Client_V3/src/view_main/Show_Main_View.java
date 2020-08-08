@@ -6,11 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import models.User_Account_Information;
 
 public class Show_Main_View {
 
-	public Show_Main_View(Stage stage, User_Account_Information user_Account_Model, Client_Controller client)	{
+	public Show_Main_View(Stage stage, Client_Controller clientController)	{
 		try {
 			Image image = new Image("/icons/logo_sm.png");
 			stage.getIcons().add(image);
@@ -19,10 +18,11 @@ public class Show_Main_View {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view_main/main_view_skin.fxml"));
 			AnchorPane root = loader.load();
 			Main_View_Controller controller = loader.getController();
+			
+			controller.setClientController(clientController);
 			controller.setStage(stage);
-			controller.setUserAccount(user_Account_Model);
-			controller.setClientController(client);
 			controller.showDashboard();
+			
 			Scene scene = new Scene(root, 1517, 796);
 			scene.getStylesheets().add(getClass().getResource("/app/application.css").toExternalForm());
 			stage.setScene(scene);

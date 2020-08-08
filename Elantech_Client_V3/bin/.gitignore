@@ -1,5 +1,3 @@
-/client_to_server_controller/
-/client_to_server_controller_methods/
 /event_objects/
 /model_trucking/
 /models/
@@ -17,4 +15,6 @@
 /view_main/
 /view_server_down_msg/
 /view_show_all_times/
-/icons/
+/client_to_server_controller/
+/app/
+/client_to_server_controller_methods/
